@@ -5,7 +5,8 @@
 # @Last modified time: 2019-04-08T10:28:25+02:00
 
 import os
-
+import warnings
+warnings.filterwarnings("ignore")
 from gausspyplus.training_set import GaussPyTrainingSet
 from gausspyplus.plotting import plot_spectra
 
