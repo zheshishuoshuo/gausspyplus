@@ -6,7 +6,8 @@
 
 
 import os
-
+import warnings
+warnings.filterwarnings("ignore")
 from gausspyplus.prepare import GaussPyPrepare
 from gausspyplus.plotting import plot_spectra
 
