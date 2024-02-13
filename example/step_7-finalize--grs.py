@@ -5,7 +5,8 @@
 # @Last modified time: 04-05-2020
 
 import os
-
+import warnings
+warnings.filterwarnings("ignore")
 from gausspyplus.finalize import Finalize
 
 
