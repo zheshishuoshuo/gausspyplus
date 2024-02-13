@@ -6,7 +6,8 @@
 
 
 import os
-
+import warnings
+warnings.filterwarnings("ignore")
 from gausspyplus.decompose import GaussPyDecompose
 from gausspyplus.spatial_fitting import SpatialFitting
 from gausspyplus.plotting import plot_spectra
