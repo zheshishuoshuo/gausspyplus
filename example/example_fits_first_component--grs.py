@@ -4,7 +4,8 @@ import os
 from astropy import units as u
 from astropy.io import fits
 from astropy.wcs import WCS
-
+import warnings
+warnings.filterwarnings("ignore")
 from gausspyplus.utils.spectral_cube_functions import correct_header, change_header, update_header
 
 
