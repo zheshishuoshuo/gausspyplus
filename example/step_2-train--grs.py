@@ -6,7 +6,8 @@
 
 
 import os
-
+import warnings
+warnings.filterwarnings("ignore")
 from gausspyplus.training import GaussPyTraining
 
 
