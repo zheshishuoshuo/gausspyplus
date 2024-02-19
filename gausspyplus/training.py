@@ -91,11 +91,13 @@ class GaussPyTraining(object):
             # Train AGD starting with initial guess for alpha
             g.train(alpha1_initial=self.alpha1_initial, alpha2_initial=self.alpha2_initial,
                     logger=self.logger)
+            
             self.alpha1 = g.p["alpha1"]
             self.alpha2 = g.p["alpha2"]
 
         else:
             g.set('phase', 'one')
             g.train(alpha1_initial=self.alpha1_initial, logger=self.logger)
+            
             self.alpha1 = g.p["alpha1"]
             self.alpha2 = g.p["alpha2"]
