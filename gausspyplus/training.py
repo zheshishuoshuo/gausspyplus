@@ -26,6 +26,8 @@ class GaussPyTraining(object):
 
         self.log_output = True
         self.verbose = True
+        self.alpha1 = None
+        self.alpha2 = None
 
         if config_file:
             get_values_from_config_file(
@@ -89,6 +91,11 @@ class GaussPyTraining(object):
             # Train AGD starting with initial guess for alpha
             g.train(alpha1_initial=self.alpha1_initial, alpha2_initial=self.alpha2_initial,
                     logger=self.logger)
+            self.alpha1 = g.p["alpha1"]
+            self.alpha2 = g.p["alpha2"]
+
         else:
             g.set('phase', 'one')
             g.train(alpha1_initial=self.alpha1_initial, logger=self.logger)
+            self.alpha1 = g.p["alpha1"]
+            self.alpha2 = g.p["alpha2"]
